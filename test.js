@@ -102,4 +102,28 @@ app.post('/add', (req, res) => {
 
 })
 
+app.post("/delleesonse", (req, res) => {
+   res.status(200)
+   console.log(req.body)
+   res.send("получил данные для удаления")
+
+   const delLessonse = async () => {
+      try {
+
+
+         await client.connect()
+         console.log("Подключен к БД")
+         lessonse = client.db().collection('lessonse')
+         await lessonse.deleteOne({ id: req.body.id });
+
+
+
+      }
+      catch (e) {
+         console.log(e)
+      }
+
+   }
+   delLessonse()
+})
 

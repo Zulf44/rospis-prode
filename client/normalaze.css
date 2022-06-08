@@ -37,11 +37,13 @@ body {
    -ms-text-size-adjust: 100%;
    -moz-text-size-adjust: 100%;
    -webkit-text-size-adjust: 100%;
-   background: #EDEEF0;
+   background: #dfe1e1;
 }
 input,
 button,
 textarea {
+  
+  
    font-family: inherit;
 }
 
